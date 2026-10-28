@@ -1,0 +1,11 @@
+$ git init --bare ../git-store.git   # the git store must exist first
+$ jj git init --git-repo ../git-store.git
+Initialized repo in "."
+
+$ ls -a
+.
+..
+.jj
+
+$ cat .jj/repo/store/git_target
+/home/hatch/workspace/build-check/jujutsu-scratch/lab/stored-elsewhere/../git-store.git

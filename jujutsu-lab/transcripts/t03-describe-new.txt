@@ -1,0 +1,20 @@
+$ jj describe -m "Packing list for the picnic"
+Working copy  (@) now at: ukqvskxp 89bc972b Packing list for the picnic
+Parent commit (@-)      : zzzzzzzz 00000000 (empty) (no description set)
+
+$ jj new -m "Drinks and cups"
+Working copy  (@) now at: qnzlmsnr 1e9beeb8 (empty) Drinks and cups
+Parent commit (@-)      : ukqvskxp 89bc972b Packing list for the picnic
+
+$ jj st
+Working copy changes:
+A drinks.txt
+Working copy  (@) : qnzlmsnr 998c4386 Drinks and cups
+Parent commit (@-): ukqvskxp 89bc972b Packing list for the picnic
+
+$ jj log
+@  qnzlmsnr lab@example.com 2026-10-28 17:55:20 998c4386
+│  Drinks and cups
+○  ukqvskxp lab@example.com 2026-10-28 17:55:19 89bc972b
+│  Packing list for the picnic
+◆  zzzzzzzz root() 00000000

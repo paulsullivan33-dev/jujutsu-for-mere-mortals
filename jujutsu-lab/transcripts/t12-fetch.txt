@@ -1,0 +1,31 @@
+$ git clone remote.git picnic2   # a collaborator using plain git
+Cloning into 'picnic2'...
+done.
+warning: remote HEAD refers to nonexistent ref, unable to checkout
+branch 'picnic-plan' set up to track 'origin/picnic-plan'.
+To /home/hatch/workspace/build-check/jujutsu-scratch/lab/remote.git
+   39f0eac..ecf1946  picnic-plan -> picnic-plan
+
+$ cd ../picnic
+$ jj git fetch
+bookmark: picnic-plan@origin [updated] tracked
+
+$ jj log --limit 6
+@    qslkzuwo lab@example.com 2026-10-28 17:56:04 09a12794
+├─╮  Merge the two menu ideas
+│ ○  stppusnt lab@example.com 2026-10-28 17:55:59 f1c52342
+│ │  Fruit salad instead
+○ │  pnrqtzul lab@example.com 2026-10-28 17:55:56 bca9c18a
+├─╯  Cheddar instead of cheese
+│ ○  kzkzkvtk lab@example.com 2026-10-28 17:56:31 picnic-plan ecf19466
+│ │  Add iced tea
+│ ○  nvqmkrsm lab@example.com 2026-10-28 17:55:41 39f0eac8
+│ │  Blanket and games
+│ ○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 4a29b132
+├─╯  Drinks and cups
+
+$ git log --oneline picnic-plan   # the same history, through git
+ecf1946 Add iced tea
+39f0eac Blanket and games
+4a29b13 Drinks and cups
+e81e850 Packing list for the picnic

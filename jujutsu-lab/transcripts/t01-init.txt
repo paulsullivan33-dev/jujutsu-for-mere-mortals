@@ -1,0 +1,21 @@
+$ jj git init --colocate
+Initialized repo in "."
+
+$ ls -a
+.
+..
+.git
+.jj
+
+$ git log --oneline   # plain git can read the same repo
+fatal: your current branch 'main' does not have any commits yet
+
+$ jj log
+@  ukqvskxp lab@example.com 2026-10-28 17:54:57 0e16a74f
+│  (empty) (no description set)
+◆  zzzzzzzz root() 00000000
+
+$ jj st
+The working copy has no changes.
+Working copy  (@) : ukqvskxp 0e16a74f (empty) (no description set)
+Parent commit (@-): zzzzzzzz 00000000 (empty) (no description set)

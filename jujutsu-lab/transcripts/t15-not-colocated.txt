@@ -1,0 +1,13 @@
+$ jj git init    # no --colocate this time
+Initialized repo in "."
+
+$ ls -a
+.
+..
+.git
+.jj
+
+$ ls .jj/repo/store
+extra
+git_target
+type

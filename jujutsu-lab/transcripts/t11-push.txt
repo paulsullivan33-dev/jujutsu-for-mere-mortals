@@ -1,0 +1,27 @@
+$ git init --bare remote.git
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/hatch/workspace/build-check/jujutsu-scratch/lab/remote.git/
+
+$ cd picnic
+$ jj git remote add origin ../remote.git
+
+$ jj git push --bookmark picnic-plan
+Changes to push to origin:
+  bookmark: picnic-plan [add to 39f0eac81ccd]
+
+$ git --git-dir=../remote.git branch
+  picnic-plan
+
+$ git --git-dir=../remote.git log --oneline picnic-plan
+39f0eac Blanket and games
+4a29b13 Drinks and cups
+e81e850 Packing list for the picnic

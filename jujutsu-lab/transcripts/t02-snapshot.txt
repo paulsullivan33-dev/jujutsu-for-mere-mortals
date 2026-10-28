@@ -1,0 +1,28 @@
+$ cat list.txt
+bread
+cheese
+apples
+
+$ jj st        # no add, no stage — just look
+Working copy changes:
+A list.txt
+Working copy  (@) : ukqvskxp 9e2e18e4 (no description set)
+Parent commit (@-): zzzzzzzz 00000000 (empty) (no description set)
+
+$ jj diff
+Added regular file list.txt:
+        1: bread
+        2: cheese
+        3: apples
+
+$ # list.txt edited in an editor: grapes added
+$ jj st        # same change, new contents
+Working copy changes:
+A list.txt
+Working copy  (@) : ukqvskxp e24b9e0a (no description set)
+Parent commit (@-): zzzzzzzz 00000000 (empty) (no description set)
+
+$ jj log
+@  ukqvskxp lab@example.com 2026-10-28 17:55:12 e24b9e0a
+│  (no description set)
+◆  zzzzzzzz root() 00000000

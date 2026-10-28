@@ -1,0 +1,17 @@
+$ jj root
+/home/hatch/workspace/build-check/jujutsu-scratch/lab/picnic
+$ jj file list --ignored
+error: unexpected argument '--ignored' found
+
+  tip: a similar argument exists: '--ignore-immutable'
+
+Usage: jj file list --ignore-immutable [FILESETS]...
+
+For more information, try '--help'.
+
+$ jj git export
+No export needed in colocated workspaces.
+
+$ git log --oneline picnic-plan | head -2
+46a5caf Add iced tea
+39f0eac Blanket and games

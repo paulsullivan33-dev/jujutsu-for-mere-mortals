@@ -1,0 +1,8 @@
+$ jj --version
+jj 0.46.0-7d382314f9420b4b8d932245b49c99492c812b9f
+
+$ jj config list
+user.name = "Lab User"
+user.email = "lab@example.com"
+operation.hostname = "lab-machine"
+operation.username = "lab"

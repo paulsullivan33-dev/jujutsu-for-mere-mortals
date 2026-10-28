@@ -1,0 +1,29 @@
+site_name: Jujutsu for Mere Mortals
+site_description: A version control system that sits on top of Git. No staging area, every edit recorded automatically, history you can rewrite without fear, and an undo button for the tool itself, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/jujutsu-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Jujutsu Is: what-jujutsu-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Jujutsu: installing-jujutsu.md
+  - Your First Repository: your-first-repository.md
+  - Working Without Staging: working-without-staging.md
+  - Changes and Their Two IDs: changes-and-their-two-ids.md
+  - Rewriting History Safely: rewriting-history-safely.md
+  - Bookmarks: bookmarks.md
+  - Conflicts Without the Sirens: conflicts.md
+  - Undo and the Operation Log: undo-and-the-operation-log.md
+  - Working with Git: working-with-git.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

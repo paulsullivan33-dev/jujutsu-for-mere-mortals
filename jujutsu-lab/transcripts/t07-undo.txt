@@ -1,0 +1,29 @@
+$ jj describe -m "A description we will regret"
+Working copy  (@) now at: nvqmkrsm f6431a27 picnic-plan | A description we will regret
+Parent commit (@-)      : qnzlmsnr 4a29b132 Drinks and cups
+
+$ jj op log --limit 3
+@  31a5bf25b872 lab@lab-machine default@ now, lasted 53 milliseconds
+│  describe commit 39f0eac81ccda100d86b28c7b6d412da77894074
+│  args: jj describe -m 'A description we will regret'
+○  0a75cbbf387d lab@lab-machine default@ 6 seconds ago, lasted 25 milliseconds
+│  point bookmark picnic-plan to commit 39f0eac81ccda100d86b28c7b6d412da77894074
+│  args: jj bookmark set picnic-plan -r @
+○  2537543b56ee lab@lab-machine default@ 6 seconds ago, lasted 47 milliseconds
+│  snapshot working copy
+│  args: jj bookmark set picnic-plan -r @
+
+$ jj undo
+Undid operation: 31a5bf25b872 (2026-10-28 17:55:48) describe commit 39f0eac81ccda100d86b28c7b6d412da77894074
+Restored to operation: 0a75cbbf387d (2026-10-28 17:55:42) point bookmark picnic-plan to commit 39f0eac81ccda100d86b28c7b6d412da77894074
+Working copy  (@) now at: nvqmkrsm 39f0eac8 picnic-plan | Blanket and games
+Parent commit (@-)      : qnzlmsnr 4a29b132 Drinks and cups
+
+$ jj log
+@  nvqmkrsm lab@example.com 2026-10-28 17:55:41 picnic-plan 39f0eac8
+│  Blanket and games
+○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 4a29b132
+│  Drinks and cups
+○  ukqvskxp lab@example.com 2026-10-28 17:55:24 e81e850b
+│  Packing list for the picnic
+◆  zzzzzzzz root() 00000000

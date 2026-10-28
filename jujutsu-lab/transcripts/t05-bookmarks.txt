@@ -1,0 +1,22 @@
+$ jj bookmark create picnic-plan -r qnzlmsnr
+Created 1 bookmarks pointing to qnzlmsnr 4a29b132 picnic-plan | Drinks and cups
+
+$ jj new -m "Blanket and games"
+Working copy  (@) now at: tupyyryy 63523854 (empty) Blanket and games
+Parent commit (@-)      : ukqvskxp e81e850b Packing list for the picnic
+
+$ jj bookmark set picnic-plan -r @   # move the bookmark to the newest change
+Error: Refusing to move bookmark backwards or sideways: picnic-plan
+Hint: Use --allow-backwards to allow it.
+
+$ jj bookmark list
+picnic-plan: qnzlmsnr 4a29b132 Drinks and cups
+
+$ jj log
+@  tupyyryy lab@example.com 2026-10-28 17:55:32 ca0300b4
+│  Blanket and games
+│ ○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 picnic-plan 4a29b132
+├─╯  Drinks and cups
+○  ukqvskxp lab@example.com 2026-10-28 17:55:24 e81e850b
+│  Packing list for the picnic
+◆  zzzzzzzz root() 00000000

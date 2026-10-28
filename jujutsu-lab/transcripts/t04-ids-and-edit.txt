@@ -1,0 +1,23 @@
+$ jj log --no-graph -T 'change_id.short() ++ "  " ++ commit_id.short() ++ "  " ++ description.first_line() ++ "\n"'
+qnzlmsnrqyzo  998c4386b195  Drinks and cups
+ukqvskxpmknl  89bc972b934e  Packing list for the picnic
+zzzzzzzzzzzz  000000000000  
+
+$ jj edit ukqvskxp   # step back into the first change
+Working copy  (@) now at: ukqvskxp 89bc972b Packing list for the picnic
+Parent commit (@-)      : zzzzzzzz 00000000 (empty) (no description set)
+Added 0 files, modified 0 files, removed 1 files
+$ # list.txt gains napkins while we are editing the older change
+$ jj st
+Rebased 1 descendant commits onto updated working copy.
+Working copy changes:
+A list.txt
+Working copy  (@) : ukqvskxp e81e850b Packing list for the picnic
+Parent commit (@-): zzzzzzzz 00000000 (empty) (no description set)
+
+$ jj log   # the child change was rewritten to sit on the new version
+○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 4a29b132
+│  Drinks and cups
+@  ukqvskxp lab@example.com 2026-10-28 17:55:24 e81e850b
+│  Packing list for the picnic
+◆  zzzzzzzz root() 00000000

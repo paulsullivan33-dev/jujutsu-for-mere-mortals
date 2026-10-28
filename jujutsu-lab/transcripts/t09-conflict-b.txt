@@ -1,0 +1,35 @@
+$ jj new ukqvskxp -m "Fruit salad instead"
+Working copy  (@) now at: stppusnt c46f9be7 (empty) Fruit salad instead
+Parent commit (@-)      : ukqvskxp e81e850b Packing list for the picnic
+Added 0 files, modified 1 files, removed 0 files
+$ # line 2 of list.txt changed to fruit salad
+
+$ jj new pnrqtzul @ -m "Merge the two menu ideas"
+Working copy  (@) now at: qslkzuwo 03ee13b7 (conflict) (empty) Merge the two menu ideas
+Parent commit (@-)      : pnrqtzul bca9c18a Cheddar instead of cheese
+Parent commit (@-)      : stppusnt f1c52342 Fruit salad instead
+Added 0 files, modified 1 files, removed 0 files
+Warning: There are unresolved conflicts at these paths:
+list.txt    2-sided conflict
+
+$ jj st
+The working copy has no changes.
+Working copy  (@) : qslkzuwo 03ee13b7 (conflict) (empty) Merge the two menu ideas
+Parent commit (@-): pnrqtzul bca9c18a Cheddar instead of cheese
+Parent commit (@-): stppusnt f1c52342 Fruit salad instead
+Warning: There are unresolved conflicts at these paths:
+list.txt    2-sided conflict
+
+$ cat list.txt
+bread
+<<<<<<< conflict 1 of 1
+%%%%%%% diff from: ukqvskxp e81e850b "Packing list for the picnic"
+\\\\\\\        to: pnrqtzul bca9c18a "Cheddar instead of cheese"
+-cheese
++cheddar
++++++++ stppusnt f1c52342 "Fruit salad instead"
+fruit salad
+>>>>>>> conflict 1 of 1 ends
+apples
+grapes
+napkins

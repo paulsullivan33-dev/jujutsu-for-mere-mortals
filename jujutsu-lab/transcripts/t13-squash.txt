@@ -1,0 +1,28 @@
+$ jj squash   # fold this change into its parent
+Error: Failed to edit description
+Caused by:
+1: Failed to run editor 'nano'
+2: No such file or directory (os error 2)
+Hint: Edited description is left in /tmp/editor-nnpdfX.jjdescription
+
+$ jj squash --use-destination-message   # same fold, no editor needed
+Working copy  (@) now at: vllpmktx b513309a (empty) (no description set)
+Parent commit (@-)      : kzkzkvtk 46a5cafd picnic-plan* | Add iced tea
+
+$ jj log --limit 4
+@  vllpmktx lab@example.com 2026-10-28 17:56:48 b513309a
+│  (empty) (no description set)
+○  kzkzkvtk lab@example.com 2026-10-28 17:56:47 picnic-plan* 46a5cafd
+│  Add iced tea
+○  nvqmkrsm lab@example.com 2026-10-28 17:55:41 39f0eac8
+│  Blanket and games
+○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 4a29b132
+│  Drinks and cups
+
+$ jj show picnic-plan | tail -6
+
+Modified regular file drinks.txt:
+   1    1: lemonade
+   2    2: paper cups
+        3: iced tea
+        4: sparkling water

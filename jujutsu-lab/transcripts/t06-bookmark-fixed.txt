@@ -1,0 +1,30 @@
+$ jj abandon tupyyryy   # drop the sideways change (and its blanket.txt)
+Abandoned 1 commits:
+  tupyyryy ca0300b4 Blanket and games
+Working copy  (@) now at: rullwmnq 924d3f70 (empty) (no description set)
+Parent commit (@-)      : ukqvskxp e81e850b Packing list for the picnic
+Added 0 files, modified 0 files, removed 1 files
+
+$ jj edit qnzlmsnr
+Working copy  (@) now at: qnzlmsnr 4a29b132 picnic-plan | Drinks and cups
+Parent commit (@-)      : ukqvskxp e81e850b Packing list for the picnic
+Added 1 files, modified 0 files, removed 0 files
+
+$ jj new -m "Blanket and games"
+Working copy  (@) now at: nvqmkrsm 0aaea1c8 (empty) Blanket and games
+Parent commit (@-)      : qnzlmsnr 4a29b132 picnic-plan | Drinks and cups
+
+$ jj bookmark set picnic-plan -r @
+Moved 1 bookmarks to nvqmkrsm 39f0eac8 picnic-plan* | Blanket and games
+
+$ jj bookmark list
+picnic-plan: nvqmkrsm 39f0eac8 Blanket and games
+
+$ jj log
+@  nvqmkrsm lab@example.com 2026-10-28 17:55:41 picnic-plan 39f0eac8
+│  Blanket and games
+○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 4a29b132
+│  Drinks and cups
+○  ukqvskxp lab@example.com 2026-10-28 17:55:24 e81e850b
+│  Packing list for the picnic
+◆  zzzzzzzz root() 00000000

@@ -1,0 +1,9 @@
+$ jj git push --bookmark picnic-plan   # the squashed history replaces the old one
+Changes to push to origin:
+  bookmark: picnic-plan [move sideways from ecf1946694b4 to 46a5cafd598a]
+
+$ git --git-dir=../remote.git log --oneline picnic-plan
+46a5caf Add iced tea
+39f0eac Blanket and games
+4a29b13 Drinks and cups
+e81e850 Packing list for the picnic

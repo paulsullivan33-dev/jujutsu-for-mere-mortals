@@ -1,0 +1,15 @@
+$ jj new ukqvskxp -m "Cheddar instead of cheese"
+Working copy  (@) now at: pnrqtzul 56225305 (empty) Cheddar instead of cheese
+Parent commit (@-)      : ukqvskxp e81e850b Packing list for the picnic
+Added 0 files, modified 0 files, removed 2 files
+$ # line 2 of list.txt changed to cheddar
+$ jj log --limit 6
+@  pnrqtzul lab@example.com 2026-10-28 17:55:56 bca9c18a
+│  Cheddar instead of cheese
+│ ○  nvqmkrsm lab@example.com 2026-10-28 17:55:41 picnic-plan 39f0eac8
+│ │  Blanket and games
+│ ○  qnzlmsnr lab@example.com 2026-10-28 17:55:24 4a29b132
+├─╯  Drinks and cups
+○  ukqvskxp lab@example.com 2026-10-28 17:55:24 e81e850b
+│  Packing list for the picnic
+◆  zzzzzzzz root() 00000000

@@ -1,0 +1,12 @@
+$ jj st   # build.log exists on disk but matches .gitignore
+Working copy changes:
+A .gitignore
+Working copy  (@) : vllpmktx e11241b8 (no description set)
+Parent commit (@-): kzkzkvtk 46a5cafd picnic-plan | Add iced tea
+
+$ # .gitignore removed
+$ jj st   # now the file is seen, and recorded
+Working copy changes:
+A build.log
+Working copy  (@) : vllpmktx 9fc96079 (no description set)
+Parent commit (@-): kzkzkvtk 46a5cafd picnic-plan | Add iced tea
